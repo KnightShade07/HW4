@@ -139,5 +139,20 @@ vector<int> cumulative(vector<int> &v) {
 
 
 string factors56(int num){
-	return num + " is not divisible by either 5 or 6";
+	string isOrIsNotDivisible = "";
+	if (num % 5 == 0 && num % 6 == 0)
+	{
+		isOrIsNotDivisible = to_string(num) + " is divisible by both 5 and 6";
+	}
+	else if (num % 5 == 0 || num % 6 == 0)
+	{
+		isOrIsNotDivisible = to_string(num) + " is divisible by 5 or 6, but not both";
+	}
+	else{
+		isOrIsNotDivisible = to_string(num) + " is not divisible by either 5 or 6";
+	}
+
+	return isOrIsNotDivisible;
+	
+	
 }
