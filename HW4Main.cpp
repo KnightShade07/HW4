@@ -15,6 +15,8 @@ bool isOdd(int num);
 
 int countEs(string word);
 
+vector<int> cumulative(vector<int> vectorList);
+
 int main() {
 	// test mathRootSum
 	cout << (abs(mathRootSum(624) - 24.0) < 0.0000000000001 ? "Success" : "Fail")
@@ -109,5 +111,26 @@ int countEs(string word){
 	}
 
 	return numOfEs;
+	
+}
+
+vector<int> cumulative(vector<int> vectorList) {
+	vector<int> vectorListSize(vectorList.size());
+
+	int operation = 0;
+
+	for (int i = 0; i < vectorList.size(); i++)
+	{
+		for (int j = 0; j <= i; j++)
+		{
+			operation = operation + vectorList[j];
+		}
+
+		vectorListSize[i] = operation;
+		operation = 0;
+		
+	}
+
+	return vectorListSize;
 	
 }
