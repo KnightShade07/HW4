@@ -17,6 +17,8 @@ int countEs(string word);
 
 vector<int> cumulative(vector<int> vectorList);
 
+string factors56(int num);
+
 int main() {
 	// test mathRootSum
 	cout << (abs(mathRootSum(624) - 24.0) < 0.0000000000001 ? "Success" : "Fail")
@@ -133,4 +135,8 @@ vector<int> cumulative(vector<int> vectorList) {
 
 	return vectorListSize;
 	
+}
+
+string factors56(int num){
+	return num + " is not divisible by either 5 or 6";
 }
