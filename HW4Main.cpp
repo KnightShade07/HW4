@@ -60,3 +60,18 @@ int main() {
 }
 
 // TO DO: function definitions go here
+
+double mathRootSum(int num){
+	double result = 0;
+	if (num > 0)
+	{
+		for (int i = 0; i <= num; i++)
+		{
+			result += (1 / (sqrt(i) + sqrt(i + 1)));
+		}
+		
+	}
+
+	return result;
+	
+}
