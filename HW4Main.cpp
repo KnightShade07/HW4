@@ -1,5 +1,9 @@
 #include <iostream>
 // TO DO: include statements go here
+#include <string>
+#include <iomanip>
+#include <sstream>
+#include <vector>
 #include <cstdlib>
 
 using namespace std;
