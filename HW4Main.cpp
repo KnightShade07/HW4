@@ -9,6 +9,13 @@
 
 using namespace std;
 
+//Ethen Lee Oliva
+//Instructor: Ken Meerdink
+//C++ Programming Assignment 4 - Functions
+//GitHub Repository: https://github.com/KnightShade07/HW4
+//Description: This assignment is an exercise in the various
+//uses for C++ Functions.
+
 // TO DO: function prototypes go here
 double mathRootSum(int num);
 
@@ -75,6 +82,8 @@ int main() {
 
 // TO DO: function definitions go here
 
+//This function will calculate a sum for you using an equation.
+
 double mathRootSum(int num){
 	double result = 0;
 	if (num > 0)
@@ -86,9 +95,11 @@ double mathRootSum(int num){
 		
 	}
 
-	return  result;
+	return result;
 	
 }
+
+//This function will return true if a number is odd, otherwise, return false.
 
 bool isOdd(int num) {
 	if (num % 2 == 0)
@@ -100,6 +111,9 @@ bool isOdd(int num) {
 	}
 	
 }
+
+//This function will return how many
+//Es are in a word, both uppercase and lowercase.
 
 int countEs(string word){
 	int numOfEs = 0;
@@ -116,7 +130,15 @@ int countEs(string word){
 	return numOfEs;
 	
 }
+//This function takes a vector of integers,
+//and changes it to take the cumulative sum
+//going up through the index
 
+//To quote the document itself:
+/*
+	". For example, if the vector passed contains {1, 1, 2, 3,5}, 
+	your function should modify it to store {1, 2, 4, 7, 12}."
+*/
 vector<int> cumulative(vector<int> &v) {
 	if (v.size() > 1)
 	{
@@ -136,7 +158,8 @@ vector<int> cumulative(vector<int> &v) {
 }
 	
 	
-
+//This function checks to see if a number is divisible by 5 or 6
+//and returns feedback to the user using a string variable.
 
 string factors56(int num){
 	string isOrIsNotDivisible = "";
