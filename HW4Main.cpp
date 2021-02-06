@@ -1,10 +1,16 @@
 #include <iostream>
 // TO DO: include statements go here
+#include <string>
+#include <iomanip>
+#include <sstream>
+#include <vector>
 #include <cstdlib>
 
 using namespace std;
 
 // TO DO: function prototypes go here
+double mathRootSum(int num);
+
 
 int main() {
 	// test mathRootSum
@@ -60,3 +66,18 @@ int main() {
 }
 
 // TO DO: function definitions go here
+
+double mathRootSum(int num){
+	double result = 0;
+	if (num > 0)
+	{
+		for (int i = 0; i <= num; i++)
+		{
+			result += (1 / (sqrt(i) + sqrt(i + 1)));
+		}
+		
+	}
+
+	return result;
+	
+}
