@@ -13,6 +13,8 @@ double mathRootSum(int num);
 
 bool isOdd(int num);
 
+int countEs(string word);
+
 int main() {
 	// test mathRootSum
 	cout << (abs(mathRootSum(624) - 24.0) < 0.0000000000001 ? "Success" : "Fail")
@@ -91,5 +93,21 @@ bool isOdd(int num) {
 	else {
 		return true;
 	}
+	
+}
+
+int countEs(string word){
+	int numOfEs = 0;
+
+	for (int i = 0; i < word.size(); i++)
+	{
+		if (word[i] == 'e' || word[i] == 'E')
+		{
+			numOfEs++;
+		}
+		
+	}
+
+	return numOfEs;
 	
 }
