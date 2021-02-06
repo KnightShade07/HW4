@@ -11,6 +11,7 @@ using namespace std;
 // TO DO: function prototypes go here
 double mathRootSum(int num);
 
+bool isOdd(int num);
 
 int main() {
 	// test mathRootSum
