@@ -5,6 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
@@ -78,14 +79,14 @@ double mathRootSum(int num){
 	double result = 0;
 	if (num > 0)
 	{
-		for (int i = 0; i <= num; i++)
+		for (int i = 1; i <= num; i++)
 		{
-			result += (1 / (sqrt(i) + sqrt(i + 1)));
+			result += 1 / (sqrt(i) + sqrt(i + 1));
 		}
 		
 	}
 
-	return result;
+	return  result;
 	
 }
 
@@ -120,19 +121,23 @@ vector<int> cumulative(vector<int> vectorList) {
 	vector<int> vectorListSize(vectorList.size());
 
 	int operation = 0;
-
-	for (int i = 0; i < vectorList.size(); i++)
+	if (vectorList.size() > 1)
 	{
-		for (int j = 0; j <= i; j++)
-		{
-			operation = operation + vectorList[j];
-		}
+		for (int i = 1; i < vectorList.size(); i++)
+			{
+				for (int j = 0; j <= i; j++)
+				{
+					operation = operation + vectorList[j];
+				}
 
-		vectorListSize[i] = operation;
-		operation = 0;
-		
+				vectorListSize[i] = operation;
+				operation = 0;
+				
+			}
+
 	}
-
+	
+			
 	return vectorListSize;
 	
 }
