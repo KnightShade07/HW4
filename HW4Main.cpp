@@ -16,7 +16,7 @@ bool isOdd(int num);
 
 int countEs(string word);
 
-vector<int> cumulative(vector<int> vectorList);
+vector<int> cumulative(vector<int> &vec);
 
 string factors56(int num);
 
@@ -117,30 +117,26 @@ int countEs(string word){
 	
 }
 
-vector<int> cumulative(vector<int> vectorList) {
-	vector<int> vectorListSize(vectorList.size());
-
-	int operation = 0;
-	if (vectorList.size() > 1)
+vector<int> cumulative(vector<int> &v) {
+	if (v.size() > 1)
 	{
-		for (int i = 1; i < vectorList.size(); i++)
+		for (int i = v.size() - 1; i >= 0; i--)
+		{
+			for (int j = 0; j < i; j++)
 			{
-				for (int j = 0; j <= i; j++)
-				{
-					operation = operation + vectorList[j];
-				}
-
-				vectorListSize[i] = operation;
-				operation = 0;
-				
+				v[i] += v[j];
 			}
-
-	}
-	
 			
-	return vectorListSize;
+		}
+		
+	}
+
+	return v;
 	
 }
+	
+	
+
 
 string factors56(int num){
 	return num + " is not divisible by either 5 or 6";
